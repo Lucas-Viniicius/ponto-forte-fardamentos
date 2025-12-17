@@ -53,3 +53,38 @@ body {
     color: rgb(0, 0, 0);
     text-decoration: none;
 }
+
+@media (max-width: 800px) {
+    .apresentacao {
+        flex-direction: column;
+        margin: 5% 2%;
+        align-items: flex-start;
+    }
+    .apresentacao__conteudo {
+        width: 100%;
+        align-items: flex-start;
+    }
+    .apresentacao__links {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+    .apresentacao__links__link {
+        width: 100%;
+        font-size: 20px;
+        padding: 16px 0;
+    }
+    .apresentacao__conteudo__titulo {
+        font-size: 26px;
+    }
+    .apresentacao__conteudo__paragrafo {
+        font-size: 16px;
+    }
+    img {
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+        margin: 0 auto;
+        display: block;
+    }
+}
