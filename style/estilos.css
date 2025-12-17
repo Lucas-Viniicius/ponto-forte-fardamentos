@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    box-sizing: border-box;     /* serve para o elemento filho não sair do elemento pai */
+    background-color: black;
+    color: azure;
+}
+
+.titulo_destaque{
+    color:rgb(35, 134, 247);
+}
+
+.apresentacao{
+    margin: 10% 15%;
+    display:flex; /* deixa os elementos na vertical um ao lado do outro */
+    align-items: center; /* Alinha os elementos entre eles mesmos, um com o outro */
+    justify-content: space-between; /* afasta os elementos filhos */
+}
+
+.apresentacao__conteudo{
+    width: 615px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    
+}
+
+.apresentacao__conteudo__titulo{
+    font-size: 36px;
+}
+
+.apresentacao__conteudo__paragrafo{
+    font-size: 21px;
+}
+
+.apresentacao__links{
+    display: flex;
+    justify-content: space-between;
+    gap: 17px;
+}
+
+.apresentacao__links__link{
+    background-color: rgb(35, 134, 247);
+    width: 260px;
+    text-align: center;
+    border-radius: 16px;
+    font-size: 25px;
+    padding: 20px 0;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
