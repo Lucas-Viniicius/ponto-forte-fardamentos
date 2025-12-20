@@ -1,20 +1,23 @@
-const carrossel = document.querySelector('.carrossel');
-const dots = document.querySelectorAll('.dot');
+document.querySelectorAll('.carrossel').forEach((carrossel) => {
 
-carrossel.addEventListener('scroll', () => {
-    const scrollLeft = carrossel.scrollLeft;
-    const largura = carrossel.offsetWidth;
-    const index = Math.round(scrollLeft / largura);
+    const indicadores = carrossel.nextElementSibling;
+    const dots = indicadores.querySelectorAll('.dot');
 
-    dots.forEach(dot => dot.classList.remove('active'));
-    if (dots[index]) dots[index].classList.add('active');
-});
+    carrossel.addEventListener('scroll', () => {
+        const largura = carrossel.offsetWidth;
+        const index = Math.round(carrossel.scrollLeft / largura);
 
-dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-        carrossel.scrollTo({
-            left: carrossel.offsetWidth * index,
-            behavior: 'smooth'
+        dots.forEach(dot => dot.classList.remove('active'));
+        if (dots[index]) dots[index].classList.add('active');
+    });
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            carrossel.scrollTo({
+                left: carrossel.offsetWidth * index,
+                behavior: 'smooth'
+            });
         });
     });
+
 });
