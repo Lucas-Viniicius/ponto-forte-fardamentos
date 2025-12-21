@@ -206,16 +206,31 @@ body {
    RESPONSIVIDADE – TABLET
 ================================ */
 @media (max-width: 768px) {
+    body {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
     .cabecalho {
         flex-direction: column;
-        gap: 12px;
-        padding: 6% 2%;
+        gap: 16px;
+        padding: 6% 2% 3% 2%;
         align-items: flex-start;
+        background-color: #d2d3d5cc;
+        width: 100vw;
+        box-sizing: border-box;
+    }
+    .cabecalho h1 {
+        font-size: 1.3rem;
+        text-align: left;
+        margin-bottom: 8px;
+        width: 100%;
     }
     .cabecalho__links {
         flex-direction: row;
         gap: 8px;
         justify-content: flex-start;
+        width: 100%;
     }
     .apresentacao {
         flex-direction: column;
@@ -228,7 +243,7 @@ body {
         align-items: center;
     }
     .apresentacao__conteudo__titulo {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
     .apresentacao__conteudo__paragrafo {
         font-size: 1rem;
@@ -244,22 +259,19 @@ body {
         height: auto;
     }
     main section h1 {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         text-align: center;
-        padding: 0 16px;
+        padding: 0 8px;
     }
     .carrossel {
         padding: 24px 0;
     }
     .carrossel img {
-        width: 220px;
-        height: 300px;
-    }
-    .div_logo_clientes{
-        flex-direction: column;
+        width: 180px;
+        height: 120px;
     }
     .logo_empresas{
-        width: 280px;
+        width: 180px;
     }
 }
 
@@ -267,50 +279,71 @@ body {
    RESPONSIVIDADE – CELULAR
 ================================ */
 @media (max-width: 480px) {
+    html, body {
+        min-height: 100vh;
+        height: 100vh;
+        width: 100vw;
+        overflow-x: hidden;
+    }
     body {
-        height: auto;
+        background-size: contain;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
     }
     .cabecalho {
         flex-direction: column;
-        gap: 8px;
-        padding: 8% 2%;
+        gap: 10px;
+        padding: 10% 2% 4% 2%;
         align-items: flex-start;
+        background-color: #d2d3d5e6;
+        width: 100vw;
+        box-sizing: border-box;
+        z-index: 2;
+        position: relative;
+    }
+    .cabecalho h1 {
+        font-size: 1.1rem;
+        text-align: left;
+        margin-bottom: 6px;
+        width: 100%;
     }
     .cabecalho__links {
         flex-direction: column;
         gap: 6px;
         align-items: flex-start;
+        width: 100%;
     }
     .apresentacao {
-        margin: 8% 6%;
-        gap: 24px;
+        margin: 10% 4%;
+        gap: 20px;
     }
     .apresentacao__conteudo__titulo {
-        font-size: 1.6rem;
-        line-height: 1.4;
+        font-size: 1.1rem;
+        line-height: 1.3;
     }
     .apresentacao__links__link {
         width: 100%;
-        font-size: 1.1rem;
-        padding: 25px 20px;
+        font-size: 1rem;
+        padding: 18px 10px;
     }
     .apresentacao02,
     .apresentacao03 {
-        margin: 10% 6%;
+        margin: 10% 4%;
     }
     .carrossel {
         justify-content: flex-start;
     }
     .carrossel img {
-        width: 200px;
-        height: 260px;
+        width: 120px;
+        height: 80px;
     }
     .logo_empresas{
-        max-width: 240px;
+        max-width: 120px;
         width: 100%;
     }
     main p {
-        font-size: 1rem;
-        line-height: 1.6;
+        font-size: 0.95rem;
+        line-height: 1.5;
     }
 }
