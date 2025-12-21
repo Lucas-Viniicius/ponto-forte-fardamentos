@@ -7,28 +7,42 @@ body {
     min-height: 100svh;
     box-sizing: border-box;
     background-color: black;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 
-    background-image: url("https://img.freepik.com/vetores-gratis/fundo-abstrato-azul_1123-51.jpg?semt=ais_hybrid&w=740&q=80");
+    background-image: url("https://i.pinimg.com/1200x/c1/c9/59/c1c95907142d16a7c0c67356a2a1a6e4.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-
 .cabecalho{
-    background-color: #2386f7;
+    background-color: #d2d3d5;
+    display: flex;
+    padding: 3%;
+    align-items: center;
+    gap: 20%;
 }
 
-.cabecalho__links{
-    
+.cabecalho__links{ 
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
+.cabecalho__links__link{
+    color: rgb(0, 0, 0);
+    border-radius: 8px;
+    padding: 8px 9px;
+    border: 2px solid rgb(29, 91, 236);
+    text-decoration: none;
+
+}
 
 .titulo_destaque{
-    color:rgb(5, 117, 245);
+    color:#227aff;
 }
 
+/* ==== SECTION 01 ==== */
 .apresentacao{
     margin: 2% 9%;
     display:flex;
@@ -57,13 +71,13 @@ body {
 }
 
 .apresentacao__links__link{
-    border: 3px solid rgb(55, 56, 56);
+    border: 1.5px solid rgb(255, 255, 255);
     width: 265px;
     text-align: center;
     border-radius: 16px;
     font-size: 25px;
     padding: 20px 0;
-    color: rgb(0, 0, 0);
+    color: #227aff;
     text-decoration: none;
 }
 
@@ -100,8 +114,9 @@ body {
     border-radius: 18px;
     scroll-snap-align: center;
     transition: transform 0.3s ease, opacity 0.3s ease;
-    border: 2.5px solid rgb(0, 94, 182);
+    border: 2.5px solid rgb(255, 255, 255);
     opacity: 0.6;
+    background-color: rgba(106, 104, 104, 0.6);
 }
 
 .carrossel img:hover {
@@ -127,7 +142,7 @@ body {
 }
 
 .carrossel-indicadores .dot.active {
-    background-color: #008cff;
+    background-color: #227aff;
     transform: scale(1.3);
 }
 
@@ -141,12 +156,6 @@ body {
     gap: 30px;
 }
 
-.div_logo_clientes{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
 .logo_empresas{
     width: 450px;
     box-sizing: border-box;
@@ -157,7 +166,7 @@ body {
     width: 280px;
     height: 180px;
     object-fit: contain;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(131, 130, 130, 0.6);
     padding: 20px;
     border-radius: 16px;
     opacity: 0.85;
@@ -178,67 +187,77 @@ body {
 
 /* ===== HOVER ===== */
 .apresentacao__links__link:hover {
-    background-color: #e5e3e3;
-    color: #2386f7;
+    background-color: #ffffff;
+    color: #00d0ff;
     transform: translateY(-2px);
 }
 
+.apresentacao__conteudo__titulo, .apresentacao02 h1, .apresentacao03 h1 {
+    text-shadow:
+        0 2px 8px rgba(0,0,0,0.25),
+        0 0.5px 0 #222,
+        0 1.5px 0 #222,
+        0 2.5px 0 #222,
+        0 0 12px rgba(3,104,255,0.10);
+    letter-spacing: 0.5px;
+}
 
 /* ===============================
    RESPONSIVIDADE – TABLET
 ================================ */
 @media (max-width: 768px) {
-
+    .cabecalho {
+        flex-direction: column;
+        gap: 12px;
+        padding: 6% 2%;
+        align-items: flex-start;
+    }
+    .cabecalho__links {
+        flex-direction: row;
+        gap: 8px;
+        justify-content: flex-start;
+    }
     .apresentacao {
         flex-direction: column;
         text-align: center;
         gap: 32px;
+        margin: 6% 2%;
     }
-
     .apresentacao__conteudo {
         width: 100%;
         align-items: center;
     }
-
     .apresentacao__conteudo__titulo {
         font-size: 1.8rem;
     }
-
     .apresentacao__conteudo__paragrafo {
         font-size: 1rem;
         line-height: 1.6;
     }
-
     .apresentacao__links {
         flex-direction: column;
         gap: 16px;
     }
-
     .apresentacao img {
         width: 100%;
         max-width: 320px;
         height: auto;
     }
-
     main section h1 {
         font-size: 1.4rem;
         text-align: center;
         padding: 0 16px;
     }
-
     .carrossel {
         padding: 24px 0;
     }
-
     .carrossel img {
         width: 220px;
         height: 300px;
     }
-
     .div_logo_clientes{
         flex-direction: column;
     }
-
     .logo_empresas{
         width: 280px;
     }
@@ -248,46 +267,48 @@ body {
    RESPONSIVIDADE – CELULAR
 ================================ */
 @media (max-width: 480px) {
-
     body {
         height: auto;
     }
-
+    .cabecalho {
+        flex-direction: column;
+        gap: 8px;
+        padding: 8% 2%;
+        align-items: flex-start;
+    }
+    .cabecalho__links {
+        flex-direction: column;
+        gap: 6px;
+        align-items: flex-start;
+    }
     .apresentacao {
         margin: 8% 6%;
         gap: 24px;
     }
-
     .apresentacao__conteudo__titulo {
         font-size: 1.6rem;
         line-height: 1.4;
     }
-
     .apresentacao__links__link {
         width: 100%;
         font-size: 1.1rem;
-        padding: 20px 10px;
+        padding: 25px 20px;
     }
-
     .apresentacao02,
     .apresentacao03 {
         margin: 10% 6%;
     }
-
     .carrossel {
         justify-content: flex-start;
     }
-
     .carrossel img {
         width: 200px;
         height: 260px;
     }
-
     .logo_empresas{
         max-width: 240px;
         width: 100%;
     }
-
     main p {
         font-size: 1rem;
         line-height: 1.6;
