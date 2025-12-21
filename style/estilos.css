@@ -48,6 +48,7 @@ body {
     display:flex;
     align-items: center;
     justify-content: space-between;
+    box-sizing: border-box;
 }
 
 .apresentacao__conteudo{
@@ -76,7 +77,7 @@ body {
     text-align: center;
     border-radius: 16px;
     font-size: 25px;
-    padding: 20px 0;
+    padding: 20px 0%;
     color: #227aff;
     text-decoration: none;
 }
@@ -252,6 +253,8 @@ body {
     .apresentacao__links {
         flex-direction: column;
         gap: 16px;
+        align-items: center;
+        width: 100%;
     }
     .apresentacao img {
         width: 100%;
@@ -335,8 +338,8 @@ body {
         justify-content: flex-start;
     }
     .carrossel img {
-        width: 120px;
-        height: 80px;
+        width: 280px;
+        height: 360px;
     }
     .logo_empresas{
         max-width: 120px;
