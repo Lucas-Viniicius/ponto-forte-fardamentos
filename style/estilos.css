@@ -22,20 +22,26 @@ body {
     align-items: center;
     gap: 20%;
 }
-
 .cabecalho__links{ 
     display: flex;
     align-items: center;
     gap: 10px;
 }
-
 .cabecalho__links__link{
-    color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0) !important;
     border-radius: 8px;
     padding: 8px 9px;
     border: 2px solid rgb(29, 91, 236);
     text-decoration: none;
+    font-size: 1.1rem;
+    background: transparent;
+    transition: color 0.2s, background 0.2s, border 0.2s;
+}
 
+.cabecalho__links__link:hover {
+    color: #227aff !important;
+    background: #fff;
+    border: 2px solid #227aff;
 }
 
 .titulo_destaque{
@@ -80,10 +86,11 @@ body {
     padding: 20px 0%;
     color: #227aff;
     text-decoration: none;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
 }
 
 .apresentacao02{
-    margin: 3% 9%;
+    margin: 4.5% 9% 2% 9%;
 }
 
 /* ===== CARROSSEL 02 ===== */
@@ -149,7 +156,7 @@ body {
 
 /* ===== SECTION 03 ===== */
 .apresentacao03{
-    margin: 7% 9%;
+    margin: 9% 9% 5% 9%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -178,19 +185,31 @@ body {
     opacity: 1;
 }
 
-.rodape{
+/* ===== RODAPÉ ORIGINAL ===== */
+.rodape {
     padding: 2% 0%;
-    color: rgb(0, 0, 0);
-    background-color: rgb(210, 208, 208);
+    color: rgb(0, 0, 0) !important;
+    background-color: rgb(210, 208, 208) !important;
+    text-align: center;
+    width: 100%;
+    display: block;
+    box-shadow: none;
+    border-top: none;
+    margin-top: 0;
+}
+.rodape__texto, .rodape p {
+    color: rgb(0, 0, 0) !important;
+    font-size: 1rem;
     text-align: center;
 }
 
 
 /* ===== HOVER ===== */
 .apresentacao__links__link:hover {
-    background-color: #ffffff;
-    color: #00d0ff;
-    transform: translateY(-2px);
+    background: #ffffff;
+    color: #227aff;
+    transform: translateY(-2px) scale(1.04);
+    border: 2px solid #227aff;
 }
 
 .apresentacao__conteudo__titulo, .apresentacao02 h1, .apresentacao03 h1 {
@@ -289,10 +308,10 @@ body {
         overflow-x: hidden;
     }
     body {
-        background-size: contain;
-        background-position: center top;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
+        background-size: cover !important;
+        background-position: center top !important;
+        background-repeat: no-repeat !important;
+        background-attachment: scroll !important;
     }
     .cabecalho {
         flex-direction: column;
@@ -335,11 +354,17 @@ body {
         margin: 10% 4%;
     }
     .carrossel {
-        justify-content: flex-start;
+        justify-content: center;
     }
     .carrossel img {
-        width: 280px;
-        height: 360px;
+        width: 95vw;
+        height: 122vw;
+        max-width: 420px;
+        max-height: 600px;
+        min-width: 220px;
+        min-height: 280px;
+        margin: 0 auto;
+        display: block;
     }
     .logo_empresas{
         max-width: 120px;
@@ -350,3 +375,5 @@ body {
         line-height: 1.5;
     }
 }
+
+
